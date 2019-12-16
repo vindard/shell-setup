@@ -16,7 +16,10 @@ alias f="fuck"
 function aliases {
 FILES=(~/.bashrc ~/.zshrc ~/.bash_aliases)
 for FILENAME in "${FILES[@]}"; do
-	if grep ^alias $FILENAME; then
+	if grep -q ^alias $FILENAME; then
+		echo "[FROM \"$FILENAME\"]"
+		echo " -------"
+		grep ^alias $FILENAME
 		echo
 	fi
 done
