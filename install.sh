@@ -33,3 +33,5 @@ for CONFIG_FILE in "${CONFIG_FILES[@]}"; do
 	fi
 done
 
+exec "$SHELL"
+
