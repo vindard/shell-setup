@@ -11,13 +11,13 @@ CONFIG_FILES=(~/.bashrc ~/.zshrc)
 SETUP_FILES=(.commonrc .bash_aliases)
 CWD=$(pwd)
 
-echo "Installing shell settings to existing setup:"
+echo && echo "Installing shell settings to existing setup:"
 for SETUP_FILE in "${SETUP_FILES[@]}"; do
 	if [ -f "$SETUP_FILE" ]; then
-		echo "$SETUP_FILE exists, making backup and copying new file from repo across."
+		echo "- $SETUP_FILE exists, making backup and replacing."
 		mv ~/$SETUP_FILE ~/$SETUP_FILE.bak
 	else 
-		echo "Copying $SETUP_FILE to home directory"
+		echo "- Copying $SETUP_FILE to home directory"
 	fi
 	cp $SETUP_FILE ~/$SETUP_FILE
 done
@@ -45,15 +45,14 @@ TEMPFILE=temp.txt
 
 function produce_diff {
         git diff --color ~/$SETUP_FILE.bak ~/$SETUP_FILE > $TEMPFILE
-        echo
-        echo
+        echo && echo
+	echo "[$SETUP_FILE]"
         echo "<-- START DIFF -->"
         echo
         cat $TEMPFILE
         echo
         echo "<-- END DIFF -->"
-        echo
-        echo
+        echo && echo
         rm $TEMPFILE
 }
 
@@ -68,7 +67,6 @@ function cleanup_file {
 
 function run_cleanup {
         echo "Starting cleanup..."
-        echo
         for SETUP_FILE in "${SETUP_FILES[@]}"; do
                 if [ -f "$SETUP_FILE.bak" ]; then
                         cleanup_file
@@ -77,6 +75,7 @@ function run_cleanup {
         echo "Cleanup finished!"
 }
 
+echo && echo "========================" && echo
 cd && run_cleanup
 cd $CWD
 
