@@ -1,0 +1,4 @@
+if [ -f ~/.commonrc ]; then
+    . ~/.commonrc
+fi
+

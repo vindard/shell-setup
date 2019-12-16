@@ -1,0 +1,20 @@
+# Alias definitions.
+# You may want to put all your additions into a separate file like
+# ~/.bash_aliases, instead of adding them here directly.
+# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+# Add local bin to PATH
+export PATH=$PATH:~/.local/bin
+
+# For using The Fuck
+eval "$(thefuck --alias)"
+
+# For pyenv
+export PATH="/home/arvinda/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
