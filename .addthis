@@ -1,7 +1,7 @@
 
 # Load common environment settings
 
-if [ -f ~/.commonrc ]; then
-    . ~/.commonrc
+if [ -f $HOME/.commonrc ]; then
+    . $HOME/.commonrc
 fi
 

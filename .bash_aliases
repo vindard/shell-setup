@@ -1,8 +1,8 @@
 alias updt="sudo apt update && sudo apt -y upgrade"
 alias inst="sudo apt update && sudo apt install -y"
-alias bashedit="vim ~/.bashrc"
-alias zshedit="vim ~/.zshrc"
-alias aliasedit="vim ~/.bash_aliases"
+alias bashedit="vim $HOME/.bashrc"
+alias zshedit="vim $HOME/.zshrc"
+alias aliasedit="vim $HOME/.bash_aliases"
 alias c="xargs echo -n | xclip -selection clipboard"
 alias gst="git status"
 alias gc="git commit -m"
@@ -15,7 +15,7 @@ alias ipy="ipython"
 alias f="fuck"
 
 function aliases {
-FILES=(~/.bashrc ~/.zshrc ~/.bash_aliases)
+FILES=($HOME/.bashrc $HOME/.zshrc $HOME/.bash_aliases)
 for FILENAME in "${FILES[@]}"; do
 	if grep -q ^alias $FILENAME; then
 		echo "[FROM \"$FILENAME\"]"
