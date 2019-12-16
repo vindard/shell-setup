@@ -4,7 +4,12 @@
 # INSTALL #
 ###########
 
+# Add any additional shell config files here to be
+# included in the installation process.
+CONFIG_FILES=(~/.bashrc ~/.zshrc)
+
 SETUP_FILES=(.commonrc .bash_aliases)
+CWD=$(pwd)
 
 echo "Installing shell settings to existing setup:"
 for SETUP_FILE in "${SETUP_FILES[@]}"; do
@@ -19,9 +24,6 @@ done
 
 
 # Add setting file references to config files if not already present
-
-CONFIG_FILES=(~/.bashrc ~/.zshrc)
-
 echo
 echo "Referencing .commonrc file in existing shell config files:"
 for CONFIG_FILE in "${CONFIG_FILES[@]}"; do
@@ -39,10 +41,7 @@ done
 # CLEANUP #
 ###########
 
-CWD=$(pwd)
 TEMPFILE=temp.txt
-
-SETUP_FILES=(.commonrc .bash_aliases)
 
 function produce_diff {
         git diff --color ~/$SETUP_FILE.bak ~/$SETUP_FILE > $TEMPFILE
@@ -67,7 +66,7 @@ function cleanup_file {
         fi
 }
 
-function run {
+function run_cleanup {
         echo "Starting cleanup..."
         echo
         for SETUP_FILE in "${SETUP_FILES[@]}"; do
@@ -78,6 +77,6 @@ function run {
         echo "Cleanup finished!"
 }
 
-cd && run
+cd && run_cleanup
 cd $CWD
 
