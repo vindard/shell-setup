@@ -1,0 +1,8 @@
+# manage dotfiles
+.*
+
+!.gitignore
+!.addthis
+!.bash_aliases
+!.commonrc
+
