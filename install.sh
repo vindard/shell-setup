@@ -27,7 +27,7 @@ done
 echo
 echo "Referencing .commonrc file in existing shell config files:"
 for CONFIG_FILE in "${CONFIG_FILES[@]}"; do
-	if grep -Fxq "if [ -f $HOME/.commonrc ]; then" $HOME/$CONFIG_FILE
+	if grep -Fxq "if [ -f ~/.commonrc ]; then" $HOME/$CONFIG_FILE
 	then
 		echo "- .commonrc already referenced from $HOME/$CONFIG_FILE"
 	else
