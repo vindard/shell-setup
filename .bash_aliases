@@ -12,4 +12,5 @@ alias gpl="git pull"
 alias aliases="grep \"^alias\\s\" $(find ~/.bashrc) && echo && grep \"^alias\\s\" $(find ~/.bash_aliases)"
 alias pip="python -m pip"
 alias ipy="ipython"
+alias f="fuck"
 
