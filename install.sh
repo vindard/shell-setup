@@ -13,7 +13,7 @@ CWD=$(pwd)
 
 echo && echo "Installing shell settings to existing setup:"
 for SETUP_FILE in "${SETUP_FILES[@]}"; do
-	if [ -f "$SETUP_FILE" ]; then
+	if [ -f "$HOME/$SETUP_FILE" ]; then
 		echo "- $SETUP_FILE exists, making backup and replacing."
 		mv $HOME/$SETUP_FILE $HOME/$SETUP_FILE.bak
 	else 
