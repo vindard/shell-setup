@@ -18,6 +18,7 @@ done
 alias updt="sudo apt update && sudo apt -y upgrade"
 alias inst="sudo apt update && sudo apt install -y"
 alias c="xargs echo -n | xclip -selection clipboard"
+alias :q="exit"
 
 # Shell config aliases
 alias bashedit="vim $HOME/.bashrc"
