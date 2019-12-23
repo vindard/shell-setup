@@ -43,6 +43,7 @@ alias gri="git rebase -i"
 alias ga="git add -A"
 alias gch="git checkout"
 alias gl="git log"
+alias gln="git --no-pager log --pretty=oneline -n"
 
 # Pass git aliases
 alias pgst="pass git status"
@@ -54,3 +55,6 @@ alias pga="pass git add -A"
 alias pgch="pass git checkout"
 alias pgd="pass git diff"
 alias pgl="pass git log"
+alias pgln="pass git --no-pager log --pretty=oneline -n"
+alias pundo="echo \"Undoing:\" && pgln 1 && echo && pass git reset --hard HEAD~1 && pgln 1"
+
