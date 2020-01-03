@@ -19,6 +19,8 @@ alias updt="sudo apt update && sudo apt -y upgrade"
 alias inst="sudo apt update && sudo apt install -y"
 alias c="xargs echo -n | xclip -selection clipboard"
 alias :q="exit"
+alias addmon="bash ~/.config/i3/multi-monitors.sh"
+alias editmon="vim ~/.config/i3/multi-monitors.sh"
 
 # Shell config aliases
 alias bashedit="vim $HOME/.bashrc"
