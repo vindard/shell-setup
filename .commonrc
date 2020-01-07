@@ -11,6 +11,9 @@ fi
 # Add local bin to PATH
 export PATH=$PATH:$HOME/.local/bin
 
+# Add GoLang to PATH
+export PATH=$PATH:/usr/local/go/bin
+
 # For using The Fuck
 eval "$(thefuck --alias)"
 
