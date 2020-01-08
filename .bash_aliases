@@ -37,7 +37,7 @@ alias py="python"
 alias ipy="ipython"
 
 # Git aliases
-alias gst="git status"
+alias gst="git -c color.ui=always status"
 alias gc="git commit -m"
 alias gph="git push"
 alias gpl="git pull"
