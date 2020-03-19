@@ -60,3 +60,14 @@ alias pgl="pass git log"
 alias pgln="pass git --no-pager log --pretty=oneline -n"
 alias pundo="echo \"Undoing:\" && pgln 1 && echo && pass git reset --hard HEAD~1 && pgln 1"
 
+# pyenv aliases
+alias pyv="pyenv version"
+alias pyu="pyenv shell --unset"
+function pyreset() {
+	pyenv uninstall $1
+	rm -rf .python-version
+	pyenv virtualenv $1
+	pyenv local $1
+	pip install --upgrade pip
+	pip list
+}
