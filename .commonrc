@@ -14,13 +14,13 @@ export PATH=$PATH:$HOME/.local/bin
 # Add GoLang to PATH
 export PATH=$PATH:/usr/local/go/bin
 
-# For using The Fuck
-eval "$(thefuck --alias)"
-
 # For pyenv
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+# For using The Fuck
+eval "$(thefuck --alias)"
 
 # if echo $SHELL | grep -q "/fish"
 # 	set -x PATH "$HOME/.pyenv/bin" $PATH
