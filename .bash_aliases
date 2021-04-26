@@ -71,3 +71,12 @@ function pyreset() {
 	pip install --upgrade pip
 	pip list
 }
+
+# Zap Wallet
+alias zap="$HOME/Installs/Zap-linux-x86_64-v0.7.2-beta.AppImage && exit"
+
+# Specter HWI Bridge
+alias specter-bridge="pyenv shell specter-desktop; python -m cryptoadvance.specter server --hwibridge; unset PYENV_VERSION"
+
+# Dropbox
+alias dropbox="$HOME/.dropbox-dist/dropboxd"

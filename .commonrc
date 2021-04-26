@@ -32,3 +32,11 @@ eval "$(thefuck --alias)"
 #
 # export GPG_TTY=$(tty)
 
+# For umbrel-dev
+export PATH="$PATH:$HOME/Developer/Projects/bitcoin/umbrel/umbrel-dev/bin"
+
+# For GoLang
+export PATH=$PATH:/usr/local/go/bin
+
+# For Electrum
+export PATH=$PATH:/home/arvinda/.local/bin
