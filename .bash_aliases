@@ -80,3 +80,6 @@ alias specter-bridge="pyenv shell specter-desktop; python -m cryptoadvance.spect
 
 # Dropbox
 alias dropbox="$HOME/.dropbox-dist/dropboxd"
+
+# Docker aliases
+alias dockerprune="levels=(system volume container image); for i in \${levels[@]}; do docker \$i prune ; done"
