@@ -83,3 +83,6 @@ alias dropbox="$HOME/.dropbox-dist/dropboxd"
 
 # Docker aliases
 alias dockerprune="levels=(system volume container image); for i in \${levels[@]}; do docker \$i prune ; done"
+
+# Trezor Suite
+alias trezor="T=\"$HOME/Installs/Trezor/Trezor-Suite-21.5.1-linux-x86_64.AppImage\"; if sha256sum -c \$T.sha256 && echo && gpg --verify \$T.asc \$T; then \$T & disown; fi"
