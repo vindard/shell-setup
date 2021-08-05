@@ -38,7 +38,8 @@ alias ipy="ipython"
 
 # Git aliases
 alias gst="git -c color.ui=always status"
-alias gc="git commit -m"
+alias gcm="git commit -m"
+alias gca="git commit -a"
 alias gph="git push"
 alias gpl="git pull"
 alias gri="git rebase -i"
@@ -49,7 +50,8 @@ alias gln="git --no-pager log --pretty=oneline -n"
 
 # Pass git aliases
 alias pgst="pass git status"
-alias pgc="pass git commit -m"
+alias pgcm="pass git commit -m"
+alias pgca="pass git commit -a"
 alias pgph="pass git push"
 alias pgpl="pass git pull"
 alias pgri="pass git rebase -i"
